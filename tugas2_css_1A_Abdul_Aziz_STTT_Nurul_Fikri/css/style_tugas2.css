@@ -1,0 +1,148 @@
+:root {
+    /* * = universal (keseluruhan) */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000;
+    font-size: 12pt;
+    line-height: 0.5cm;
+}
+
+h1 {
+    color: white;
+    line-height: 1cm;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+fieldset,
+legend {
+    /* groupping */
+    background-color: orange;
+    color: white;
+    border: #006400 2px solid;
+    /* border-radius: 30px; */
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /*
+    padding: 15px; => all padding
+    padding: 15px 5px; => atas-bawah:15px, kanan-kiri:px 
+    padding: 10px 5px 10px 5px; => searah jarum jam
+    */
+    padding: 5px;
+}
+
+body {
+    margin: 0.5cm 2cm;
+    background-color: silver;
+}
+
+hr {
+    border: 1px dashed maroon;
+}
+
+div#menu {
+    text-align: center;
+}
+
+/*--------------pseudo class-----------------*/
+a:link,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: khaki;
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px ridge green;
+    border-radius: 10px;
+    background-color: #9ACD32;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: red;
+    font-size: 16pt;
+    font-weight: bolder;
+    border: 5px inset orangered;
+    border-radius: 10px;
+    background-color: yellow;
+    padding: 15px;
+}
+
+/*-------pseudo element----------*/
+.p1:first-letter {
+    font-size: 24pt;
+    color: yellow;
+    font-family: 'Segoe UI';
+    float: left;
+    margin-top: 10px;
+    padding-right: 5px;
+}
+
+p.p1::first-line {
+    font-style: italic;
+    background-color: khaki;
+    color: #808000;
+}
+
+.place {
+    font-weight: bolder;
+    color: green;
+    font-family: Broadway;
+    font-size: 14pt;
+}
+
+p{
+    text-align: justify;
+}
+
+font {
+    font-size: 12pt ;
+}
+
+.pendidikan {
+    list-style-image: url('../icon/senyum.jpg');
+}
+
+.education {
+    list-style-image: url('../icon/heart.png');
+}
+
+.hoby {
+    list-style-image: url('../icon/good.png');
+}
+
+.favotive_menu {
+    list-style-image: url('../icon/star.jpg');
+}
+
+#table_pendidikan {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+#table_pendidikan td,
+#table_pendidikan th {
+    border: 1px dashed green;
+    padding: 10px;
+}
+
+#table_pendidikan th {
+    padding: 10px 5px;
+    background-color: orangered;
+    color: white;
+}
+
+#table_pendidikan tr:nth-child(even) {
+    background-color: olivedrab;
+}
+
+#table_pendidikan tr:nth-child(odd) {
+    background-color: greenyellow;
+}
+
+#table_pendidikan tr:hover {
+    background-color: silver;
+}
