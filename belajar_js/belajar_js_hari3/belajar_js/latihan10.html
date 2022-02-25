@@ -1,0 +1,33 @@
+<script>
+    //array 1 dimensi / scalar
+    const buah2an = ['Pepaya', 'Mangga', 'Pisang', 'Jambu'];
+
+    buah2an[1] = 'Jeruk';
+
+    //buah2an.pop(); hapus element terakhir
+    //delete buah2an[2]; //hapus sebuah element array
+    buah2an.splice(2, 1); //hapus buah index 2, hanya 1 element, namun tidak menghapus indexnya
+    //buah2an.remove(); //hapus seluruh element array
+    //delete buah2an(); //hapus seluruh element array
+    document.write(`<br />${buah2an[0]}`); //cetak buah pertama
+    document.write(`<br />${buah2an[1]}`); //cetak buah pengganti
+    document.write("<br/>" + buah2an[2]); //cetak buah pisang
+    document.write(`<br />${buah2an[3]}`); //cetak buah pengganti
+    //tambah buah2an baru
+    buah2an.push('Nangka', 'Semangka', 'Melon');
+    document.write(`<br />${buah2an[4]}`); //cetak buah baru
+    document.write(`<br />${buah2an[5]}`); //cetak buah baru
+    document.write(`<br />${buah2an[6]}`); //cetak buah baru
+    //cetak seluruh key element array
+    for (let buah in buah2an) {
+        document.write(`<br/>Buah ${buah}`);
+    }
+    //cetak seluruh value element array
+    for (let buah in buah2an) {
+        document.write(`<br />Buah ${buah2an[buah]}`);
+    }
+    //cetak seluruh key dan value element array
+    for (let buah in buah2an) {
+        document.write(`<br />Buah dengan index - ${buah} adalah buah ${buah2an[buah]} `);
+    }
+</script>

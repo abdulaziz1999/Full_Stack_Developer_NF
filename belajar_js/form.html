@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="firstname" placeholder="First Name">
+        <input type="text" name="username" placeholder="Username">
+        <br><br>
+        <input type="text" name="emailornohp" placeholder="Mobile Number or email address">
+        <input type="password" name="password" placeholder="Password">
+        <br><br>
+        <select name="tanggal" id="tanggal">
+        </select>
+        <select name="bulan" id="bulan">
+        </select>
+        <select name="tahun" id="tahun">
+        </select>
+        <br><br>
+        <p id="gender"></p>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        //tanggal
+        let opti
+        let i = 1
+        while(i<=31){
+            opti += "<option value='"+i+"'>"+i+"</option>";
+            i++;
+        }
+        document.getElementById("tanggal").innerHTML = opti;
+
+        //Bulan
+        let text ;
+        let bulan = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        for(let x in bulan){
+            text += "<option value='"+bulan[x]+"'>"+bulan[x]+"</option>";
+        }
+        document.getElementById("bulan").innerHTML = text;
+
+        //tahun
+        let tahun = 2022;
+        let umur;
+        let desc;
+        for(let i=tahun;i>=tahun-100;i--){
+            umur = tahun - i;
+            if(umur < 13){continue;}
+            if(umur > 60){break;}
+            desc += `<option>${i}</option>`;
+        }
+        document.getElementById("tahun").innerHTML = desc
+
+        //gender
+        let text1;
+        let gender = ['Pria','Wanita'];
+        for(let z in gender){
+            text1 += '<input type="radio" name="gender" value="'+gender[z]+'"> '+gender[z]+'';
+        }
+        document.getElementById("gender").innerHTML = text1;
+    </script>
+</body>
+</html>

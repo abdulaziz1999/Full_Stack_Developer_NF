@@ -1,0 +1,173 @@
+﻿Di bawah ini merupakan tag javascript yang dapat disisipkan pada dokumen HTML
+A. <js>
+B. <javascript>
+C. <script>
+D. <jquery>
+ANSWER: C
+Di bawah adalah sintak javascript untuk mengambil elemen HTML secara spesifik pada atribut ID
+A. document.getElementById(“demo”);
+B. document.getElementByName(“demo”);
+C. document.getElementsByClassName(“demo”);
+D. document.getElementsByTagName(“demo”);
+ANSWER: A
+Kita dapat menambahkan sintak javascript dalam dokumen HTML pada bagian
+A. di dalam tag <head>
+B. di dalam tag <body>
+C. Bisa di dalam tag <head> maupun<body>
+D. Tidak bisa keduanya
+ANSWER: C
+
+
+Berikut adalah sintak yang benar untuk mengambil referensi file javascript demo.js secara eksternal
+A. <script src=”demo.js”> 
+B. <script name=”demo.js”>
+C. <script href=”demo.js”>
+D. <script id=”demo.js”>
+ANSWER: A
+
+Berikut sintak yang benar untuk menulis kalimat Hello World
+A. document.line(“Hello Wordl”)
+B. document.show(“Hello Wordl”)
+C. document.alert(“Hello Wordl”)
+D. document.write(“Hello Wordl”)
+ANSWER: D
+
+Bagaimana membuat komentar di javascript
+A. <!–ini komentar–>
+B. *ini komentar*
+C. //ini komentar
+D. /* ini komentar */
+ANSWER: C
+
+Bagaimana membuat komentar di javascript bila lebih dari satu baris kode
+A. <!–Komentar lebih dari satu baris–>
+B. //Komentar lebih dari satu baris// 
+C. </Komentar lebih dari satu baris/>
+D. /*Komentar lebih dari satu baris*/ 
+ANSWER: D 
+
+
+Javascript memiliki beberapa tipe data seperti berikut, kecuali;
+A. list
+B. Numerik
+C. String
+D. Boolean
+ANSWER: A
+
+Berikut cara membuat variabel yang benar di javascript
+A. declare nama_variabel;
+B. variable nama_variabel;
+C. var nama_variabel;
+D. nama_variabel;
+ANSWER: C
+
+Berikut adalah contoh penulisan nama variabel yang SALAH
+A. var nama;
+B. var usia+;
+C. var jenis_kelamin;
+D. var nilai;
+ANSWER: B
+
+Perintah di javascript yang berfungsi untuk menampilkan data/informasi dalam bentuk POP UP adalalah
+A. alert()
+B. show()
+C. write()
+D. pop_up()
+ANSWER: A
+   
+Perintah yang digunakan di dalam javascript untuk menerima inputan dari keyboard adalah
+A. input
+B. alert
+C. prompt
+D. show
+ANSWER: C
+
+Perintah di javascript yang berfungsi untuk memberikan suatu informasi ke pengguna melalui jendela dialog dengan tombol Ok dan cancel adalah
+A. prompt
+B. confirm
+C. dialog
+D. write
+ANSWER: B
+
+Bagaimana cara membuat fungsi di javascript?
+A. function nama_fungsi()
+B. function => nama_fungsi()
+C. function : nama_fungsi()
+D. function [nama_fungsi]
+ANSWER: A
+
+Bagaimana cara memanggil fungsi di javascript?
+A. function nama_fungsi()
+B. call nama_fungsi()
+C. nama_fungsi()
+D. show nama_fungsi()
+ANSWER: C
+
+Bagaimana cara membuat pernyataan IF di javascript
+A. if (i==1)
+B. if i == 1
+C. if != 1 then
+D. if (i<>1)
+ANSWER: A
+
+Bagaimana membuat perulangan while di javascript
+A. while (i<=10) then
+B. while : i<=10
+C. while {i<=10}
+D. whie (i<=10)
+ANSWER: D
+
+Bagaimana membuat perulangan for di javascript
+A. for (i<=10)
+B. for (i=1;i<=10)
+C. for (i=1;i<=10;i++)
+D. for (i=1;i<=10;i++) then
+ANSWER: C
+
+Berikut adalah jenis-jenis operator di javascript, KECUALI
+A. Aritmatika
+B. Penugasan
+C. Logika
+D. perulangan
+ANSWER: D
+
+Berikut ini adalah contoh operator aritmatika, KECUALI
+A. &&
+B. %
+C. +
+D. /
+ANSWER: A
+
+Di bawah ini adalah contoh operarot logika, kecuali
+A. ++
+B. &&
+C. ||
+D. !
+ANSWER: A
+
+Berikut adalah cara pembuatan array yang benar di javascript
+A. mahasiswa = [‘Rini’,’Aldi’,’Acep’,’Putra’]
+B. mahasiswa = {‘Rini’,’Aldi’,’Acep’,’Putra’}
+C. mahasiswa = (‘Rini’,’Aldi’,’Acep’,’Putra’)
+D. mahasiswa = ‘Rini’,’Aldi’,’Acep’,’Putra’
+ANSWER: A
+
+Berikut adalah jenis-jenis array di javascript, KECUALI
+A. Array Numerik
+B. Array Assosiatif
+C. Array Boolean
+D. Array Campuran
+ANSWER: A
+
+Event adalah sesuatu yang terjadi ketika ada aksi yang dilakukan oleh pengguna atau sistem pada halaman web. Pernyataan ini bersifat?
+A. Benar
+B. Salah
+ANSWER: A
+
+Berikut ini dalah contoh event yang sering digunakan, KECUALI
+A. onload
+B. onclick
+C. onchange
+D. ontime
+ANSWER: D
+

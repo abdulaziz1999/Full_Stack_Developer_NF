@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Buah</title>
+</head>
+<body>
+    <script>
+        //deklarasi variabel
+        var pembeli, buah, jumlah_kg, harga_kg ,total_harga, nama_buah
+
+        //input data dari prompt
+        pembeli = prompt("Masukkan nama pembeli :")
+        buah = prompt("List Buah :\n 1.Jeruk \n 2.Mangga \n 3.Apel \n 4.Anggur \n\n Masukkan hanya angka :")
+        jumlah_kg = prompt("Masukkan jumlah kg :")
+
+        //if else untuk menentukan harga buah dan name buah
+        if (buah == "1") harga_kg = 17000, nama_buah = 'Jeruk'
+        else if (buah == "2") harga_kg = 25000, nama_buah = 'Mangga'
+        else if (buah == "3") harga_kg = 27000, nama_buah = 'Apel'
+        else if (buah == "4") harga_kg = 30000, nama_buah = 'Anggur'
+        else harga_kg = 0
+        total_harga = jumlah_kg * harga_kg
+
+        //output
+        document.write("Pembeli = " + pembeli + "<br/>Buah = " + nama_buah + "<br/>Jumlah Kg = " + jumlah_kg + "<br/>Total Harga = " + total_harga)
+    </script>
+</body>
+</html>

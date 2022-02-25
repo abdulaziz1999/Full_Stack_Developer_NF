@@ -1,0 +1,18 @@
+Tugas 3 Java Script
+===================
+Buatlah kode html+css+java script untuk membuat form registrasi FB.
+Gunakan kode java script untuk looping:
+- element form tanggal lahir gunakan looping while
+- element form bulan lahir gunakan array nama2 bulan (januari s/d desember) dan
+  loopingnya menggunakan for in
+- element form tahun lahir gunakan looping for 1 - 100 tahun dari tahun sekarang, 
+  lalu gunakan keyword break , continue untuk yg boleh register umur 13 s.d 60 tahun
+- element form gender array jenis kelaming (Pria dan Wanita) dan
+  loopingnya menggunakan for in
+
+File disimpan dengan format nama file:
+tugas3_js_kelas_nama_lengkap_kampus.html
+Contoh: tugas3_js_1A_Budi_Santoso_STTTelkom.html
+
+Assign tugas pada link group masing-masing kelompok pada LMS.  
+Dead Line: Kamis, 24 Februari 2022 Jam 23.59 WIB 

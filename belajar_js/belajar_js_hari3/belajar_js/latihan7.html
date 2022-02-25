@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Daftar Mahasiswa</title>
+    </head>
+
+    <body>
+        <h3 align="center">Daftar Mahasiswa</h3>
+        <table align="center" cellpadding="10" cellspacing="0" width="40%">
+            <thead>
+                <tr bgcolor="orange">
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script>
+                    for (let no = 1; no <= 100; no++) {
+                        //warna-warni
+                        let warna = (no % 2 == 0) ? "yellow" : "greenyellow";
+                        document.write("<tr bgcolor=" + warna + ">\
+                        <td>" + no + "</td>\
+                        <td>Siswa " + no + "</td>\
+                        <td>Jl. Margonda Depok No. " + no + "</td>\
+                    </tr>");
+                    }
+                </script>
+            </tbody>
+        </table>
+    </body>
+
+</html>
+<!--
+bilangan ganjil sisa 1 dari pembagian angka 2, contoh : 3 % 2 = 1, 9 % 2 = 1,  13 % 2 = 1
+bilangan genap habis/tidak bersisa dari pembagian angka 2, contoh : 4 % 2 = 0, 10 % 2 = 0
+-->

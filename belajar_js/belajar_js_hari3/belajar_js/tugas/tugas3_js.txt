@@ -1,0 +1,32 @@
+Tugas 2 Java Script
+===================
+Buatlah kode java script untuk mencetak populasi data dengan variabel2 sbb:
+- nama_mahasiswa, mata_kuliah, nilai (inisialisasi datanya bebas)
+- keterangan (gunakan ternary untuk dinyatakan lulus, nilai minimal 60)
+- grade (gunakan if majemuk) dengan ketentuan:
+  - A : nilai antara > 85 s/d 100
+  - B : nilai antara > 75 s/d 85
+  - C : nilai antara >= 60 s/d 75
+  - D : nilai antara > 30 s/d <60
+  - E : nilai antara >= 0 s/d 30
+- predikat (gunakan switch case) dengan ketentuan:
+  - grade A => Memuaskan
+  - grade B => Baik
+  - grade C => Cukup
+  - grade D => Kurang
+  - grade E => Buruk
+Simpan ke file: nilai.html  
+
+Buatlah kode java script untuk mencetak perulangan data mahasiswa dalam bentuk tabel:
+(gunakan konsep thead dan tbody pada tabel)
+- kolom No (cetak no. 1 s/d 10)
+- kolom Nama (cetak Siswa 1 s/d Siswa 10)
+- kolom Alamat (cetak Jl. Margonda No. 1 s/d Jl. Margonda No. 10)
+Simpan ke file: mahasiswa.html  
+
+Seluruh file disimpan dalam satu folder, dizip, lalu simpan dengan nama file:
+Format nama file tugas: tugas2_js_kelas_nama_lengkap_kampus.zip
+Contoh: tugas2_js_1A_Budi_Santoso_STTTelkom.zip
+
+Assign tugas pada link group masing-masing kelompok pada LMS.  
+Dead Line: Rabu, 23 Februari 2022 Jam 23.59 WIB 

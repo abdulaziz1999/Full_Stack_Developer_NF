@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Belajar Struktur Kendali IF</title>
+    </head>
+
+    <body>
+        <marquee onmouseover="stop()" onmouseout="start()">
+            <h3>Belajar Kondisi IF</h3>
+        </marquee>
+        <hr />
+        <script>
+            var nama = "Siti Aminah";
+            var nilai = 59.9999999999;
+            var ket;
+            if (nilai >= 60) {
+                ket = "Lulus"; //TRUE
+            } else {
+                ket = "Tidak Lulus"; //FALSE
+            }
+            document.write("Nama :" + nama +
+                "<br/>Nilai :" + nilai +
+                "<br/>Keterangan :" + ket
+            );
+        </script>
+    </body>
+
+</html>

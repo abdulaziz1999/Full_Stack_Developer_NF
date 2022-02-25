@@ -1,0 +1,35 @@
+    #tableStyle {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    }
+
+    #tableStyle td, #tableStyle th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
+
+    #tableStyle tr:hover {background-color: #ddd;}
+
+    #tableStyle th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    h1{
+        text-align: center;
+        color: white;
+    }
+    table {
+        border-radius: 1em;
+        overflow: hidden;
+    }
+
+    #divBg {
+        border-radius: 25px; 
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(21,219,27,1) 35%, rgba(0,212,255,1) 100%); 
+        padding: 15px;
+    }

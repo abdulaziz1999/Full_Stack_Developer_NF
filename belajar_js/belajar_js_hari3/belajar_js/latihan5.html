@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Belajar Struktur Kendali IF</title>
+    </head>
+
+    <body>
+        <marquee onmouseover="stop()" onmouseout="start()">
+            <h3>Belajar Kondisi IF</h3>
+        </marquee>
+        <hr />
+        <script>
+            var nama = "Ahmad Ramadhon";
+            var jabatan = "Kabag";
+            var menikah = "Iya";
+            var agama = "Islam";
+            var jmlAnak = 0;
+            var gaji, tunjab, tunkel, zakat, gator, gaber, status;
+            /*
+            1. tunjab = 20% dari gapok           
+            2. tunkel = jika belum punya anak = 0
+                     jika anak 1 s/d 2 = 10% dari gapok
+                     jika anak 3 s/d 5 = 15% dari gapok
+                     jika anaknya >5 = 20% dari gapok
+            zakat 2,5% = jika pegawai muslim dan gator minimal 7jt        
+            */
+            //ternary
+            //var = (logic) ? TRUE : FALSE
+            /*
+            if(menikah == "Sudah"){
+                status = "Sudah Menikah";
+            }
+            else{
+                status = "Jomblo";
+            }
+            */
+            status = (menikah == "Iya") ? "Menikah" : "Jomblo";
+            //var ket = (nilai >= 60) ? "Lulus" : "Gagal";
+
+            if (jabatan == "Manager") gaji = 20000000; //TRUE 1
+            else if (jabatan == "Asisten Manager") gaji = 15000000; //TRUE 2
+            else if (jabatan == "Kabag") gaji = 10000000; //TRUE 3
+            else if (jabatan == "Staff") gaji = 5000000; //TRUE 4
+            else grup.format(gaji) = 0; //FALSE
+
+            //belajar switch case
+            switch (jabatan) {
+                case "Manager":
+                    gaji = 20000000;
+                    break;
+                case "Asisten Manager":
+                    gaji = 15000000;
+                    break;
+                case "Kabag":
+                    gaji = 10000000;
+                    break;
+                case "Staff":
+                    gaji = 5000000;
+                    break;
+                default:
+                    gaji = 0;
+            }
+
+            tunjab = 0.2 * gaji;
+
+            if (jmlAnak < 1) tunkel = 0;
+            else if (jmlAnak >= 1 && jmlAnak <= 2) tunkel = 0.1 * gaji;
+            else if (jmlAnak >= 3 && jmlAnak <= 5) tunkel = 0.15 * gaji;
+            else tunkel = 0.2 * gaji;
+
+            gator = gaji + tunjab + tunkel;
+
+            //if (agama == "Islam" && gator >= 7000000) zakat = 0.025 * gator;
+            //else zakat = 0;
+
+            zakat = (agama == "Islam" && gator >= 7000000) ? 0.025 * gator : 0;
+
+            gaber = gator - zakat;
+
+            let grup = Intl.NumberFormat('id-ID');
+
+            document.write("Nama :" + nama +
+                "<br/>Status :" + status +
+                "<br/>Jumlah Anak :" + jmlAnak +
+                "<br/>Jabatan :" + jabatan +
+                "<br/>Gaji : Rp. " + grup.format(gaji) +
+                "<br />Tunjangan Jabatan : Rp. " + grup.format(tunjab) +
+                "<br />Tunjangan Keluarga : Rp. " + grup.format(tunkel) +
+                "<br />Gaji Kotor : Rp. " + grup.format(gator) +
+                "<br />Zakat Profesi : Rp. " + grup.format(zakat) +
+                "<br />Take Home Pay : Rp. " + grup.format(gaber)
+            );
+
+            alert("Nama : Rp. " + nama +
+                "\nStatus : Rp. " + status +
+                "\nJumlah Anak : Rp. " + jmlAnak +
+                "\nJabatan : Rp. " + jabatan +
+                "\nGaji : Rp. " + grup.format(gaji) +
+                "\nTunjangan Jabatan : Rp. " + grup.format(tunjab) +
+                "\nTunjangan Keluarga : Rp. " + grup.format(tunkel) +
+                "\nGaji Kotor : Rp. " + grup.format(gator) +
+                "\nZakat Profesi : Rp. " + grup.format(zakat) +
+                "\nTake Home Pay : Rp. " + grup.format(gaber)
+            );
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Belajar Struktur Kendali IF</title>
+    </head>
+
+    <body>
+        <marquee onmouseover="stop()" onmouseout="start()">
+            <h3>Belajar Kondisi IF</h3>
+        </marquee>
+        <hr />
+        <script>
+            var kondisi = "sakit";
+            var ket;
+            if (kondisi == "sehat") {
+                ket = "Berangkat ke kampus untuk kuliah"; //TRUE
+            } else {
+                ket = "Tidak berangkat ke kampus, belajar dari rumah saja"; //FALSE
+            }
+            document.write("Kondisi saya hari ini " + kondisi + ", maka saya " + ket);
+        </script>
+    </body>
+
+</html>

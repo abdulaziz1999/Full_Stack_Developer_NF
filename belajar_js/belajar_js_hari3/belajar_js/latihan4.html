@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Belajar Struktur Kendali IF</title>
+    </head>
+
+    <body>
+        <marquee onmouseover="stop()" onmouseout="start()">
+            <h3>Belajar Kondisi IF</h3>
+        </marquee>
+        <hr />
+        <script>
+            var nama = "Siti Aminah"
+            var jabatan = "Manager"
+            var gaji
+            /*
+            Jika manager gajinya 20 jt
+            Jika asisten gajinya 15 jt
+            Jika kabag gajinya 10 jt
+            Jika staff gajinya 5 jt
+            
+            if (jabatan == "Manager") {
+                gaji = 20000000; //TRUE 1
+            } else if (jabatan == "Asisten Manager") {
+                gaji = 15000000; //TRUE 2
+            } else if (jabatan == "Kabag") {
+                gaji = 10000000; //TRUE 3
+            } else if (jabatan == "Staff") {
+                gaji = 5000000; //TRUE 4
+            } else {
+                gaji = 0; //FALSE
+            }
+            */
+
+            if (jabatan == "Manager") gaji = 20000000 //TRUE 1
+            else if (jabatan == "Asisten Manager") gaji = 15000000 //TRUE 2
+            else if (jabatan == "Kabag") gaji = 10000000 //TRUE 3
+            else if (jabatan == "Staff") gaji = 5000000 //TRUE 4
+            else gaji = 0 //FALSE
+
+            document.write("Nama :" + nama +
+                "<br/>Jabatan :" + jabatan +
+                "<br/>Gaji :" + gaji
+            );
+        </script>
+    </body>
+
+</html>

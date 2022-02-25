@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+    <title>Belajar CSS Eksternal</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyle2.css" />
+    <link rel="icon" href="icon/musik.gif" type="image/x-icon">
+</head>    
+<body> 
+        <h1>
+        <marquee direction="left" scrolldelay="100">
+            Welcome to My Home Page
+        </marquee>    
+        </h1>
+        <hr/>
+        <br/>
+        <div id="menu">
+            <a href="">home</a>
+            <a href="">about us</a>
+            <a href="">product</a>
+            <a href="">gallery</a>
+            <a href="">contact us</a>
+        </div> 
+        <br/>   
+        <hr/>
+        <fieldset>
+        <legend><h2>Company Profile</h2></legend>    
+        <p class="p1">
+        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" align="right" width="8%" hspace="10" border="2" />
+            
+        NF COMPUTER adalah bagian dari grup Nurul Fikri'<sup>s</sup> yang telah dipercaya oleh masyarakat Indonesia di bidang pendidikan dan peningkatan sumber daya manusia selama lebih dari 24 tahun. Alumni-alumninya telah berkiprah dan diakui kualitas kerja dan integritasnya oleh dunia usaha.
+        NF COMPUTER dirintis sejak tahun 1994 dan merupakan sebuah lembaga di bidang pendidikan dan pelatihan IT (Information Technology). Kami berkomitmen menjadi partner perusahaan Anda dalam mengembangkan kemampuan serta keahlian SDM di bidang IT. Dengan komitmen tersebut, kami mempersiapkan tim pengajar yang professional dan berpengalaman di bidang IT.
+        Di Era Industri 4.0 saat ini, teknologi informasi berkembang sangat cepat, oleh karena itu pengembangan sumber daya manusia di bidang IT menjadi sebuah kebutuhan yang perlu diprioritaskan. NF COMPUTER menjadi jawaban yang tepat atas kebutuhan pengembangan kompetensi IT. Sehingga kami selalu berusaha untuk terus berinovasi terhadap teknologi terbaru.
+        
+        </p>
+        </fieldset>
+       
+        <h2><u>Visi & Misi</u></h2>
+        <p>
+        <b><i>Visi</i></b><br/>
+        Menjadi institusi pelatihan yang kompeten dan profesional di bidang pendidikan teknologi informasi dan komunikasi di berbagai wilayah indonesia.
+        <br/><br/><!-- break row / pindah baris -->    
+        <b><i>Misi</i></b><br/>
+        Membangun, memelihara dan mengembangkan institusi pelatihan bisnis berdaya saing tinggi, berkarakter profesional, kompeten, mengedepankan integritas dan tanggung jawab sosial, dengan mengembangkan dan menyediakan produk produk pendidikan dan pelatihan teknologi informasi dan komunikasi prima.    
+        </p>
+
+        <h2>Deskripsi Bisnis</h2>
+        <p>
+        NF COMPUTER menyelenggarakan Pelatihan dan Pendidikan di bidang <span class="tik">Teknologi Informasi dan Komunikasi (IT Training)</span> yang dibagi menjadi lima produk.
+        Pelatihan (training) ini dibagi dalam beberapa kategori produk yaitu:   
+        
+        <ul class="jenis_kelas"><!-- unorder list/ bulleting -->
+            <li><strong>Public Class</strong>, merupakan short course bidang TIK (Teknologi Informasi dan Komunikasi) yang berbasis Linux maupun Windows.</li>
+            <li><b>Exclusive Class</b>, merupakan paket training yang diberikan kepada customer dengan durasi 6-8 jam perhari dengan jumlah peserta minimal 2 orang dan pelaksanaan pelatihannya di NF Computer.</li>
+            <li><b>In House/In Company Training</b>, yaitu pelatihan TIK yang dikustomisasi untuk kebutuhan perusahaan-perusahaan.</li>  
+        </ul>
+        </p> 
+
+        <h2>Paket Kursus</h2>
+        <ol class="kursus">
+            <li>Programming
+                <ol class="programming">
+                    <li>Python
+                        <ul class="python">
+                            <li>Python Fundamental</li>
+                            <li>Web Django Framework</li>
+                        </ul>    
+                    </li>
+                    <li>Java</li>
+                    <li>PHP</li>
+                </ol>
+            </li>        
+            <li>Database
+                <ol class="database">
+                    <li>MariaDB</li>
+                    <li>PostgreSQL
+                        <ul class="postgresql">
+                            <li>PostgreSQL Fundamental</li>
+                            <li>PostgreSQL Advance</li>
+                        </ul>    
+                    </li>
+                </ol>    
+            </li>
+            <li>Networking</li>
+            <li>Design Grafis</li>
+            <li>Literasi Komputer</li>
+        </ol>
+
+        <h3>Latihan CSS Tabel</h3>
+
+        <table id="customers">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Königlich Essen</td>
+            <td>Philip Cramer</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+        <tr>
+            <td>North/South</td>
+            <td>Simon Crowther</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Paris spécialités</td>
+            <td>Marie Bertrand</td>
+            <td>France</td>
+        </tr>
+        </table>
+
+    </body>  
+</html>          
