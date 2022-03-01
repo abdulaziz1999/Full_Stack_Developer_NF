@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Belanja</title>
+</head>
+<body>
+    <form method="post">
+        <input type="text" name="nama" id="nama" placeholder="Nama Pelanggan">
+        <br><br>
+        <select name="barang" id="barang">
+        </select>
+        <br><br>
+        <input type="text" name="jumlah" id="jumlah" placeholder="Jumlah">
+        <br><br>
+        <input type="submit" name="proses" onclick="transaksi()" value="Proses">
+    </form>
+</body>
+    <script>
+        let text ;
+        let barang =['TV','Kulkas','AC']
+        let ket = `<option >Pilih Barang</option>`;
+        for(let x of barang){
+            text += `<option value='${x}'>${x}</option>`;
+        }
+        document.getElementById("barang").innerHTML = ket + text;
+
+        const transaksi = () => {
+            let nama, barang, jumlah, harga, diskon, ppn, harga_barang, total_harga;
+            nama = document.getElementById("nama").value;
+            barang = document.getElementById("barang").value;
+            jumlah = document.getElementById("jumlah").value;
+
+            //swith case harga  barang
+            switch(barang){
+                case 'TV': harga = 2000000; break;
+                case 'Kulkas': harga = 400000; break;
+                case 'AC': harga = 3000000; break;
+            }
+            //harga barang
+            harga_barang = harga * jumlah;
+
+            //if harga diskon
+            if(barang == 'Kulkas' && jumlah >= 3) diskon = harga_barang * 30/100;  
+            else if(barang == 'AC' && jumlah >= 3) diskon = harga_barang * 20/100;    
+            else diskon = 10/100;
+                
+            //pajak PPN 10%
+            ppn = harga_barang * 10/100;
+
+            //total bayar
+            let total_harga = (harga_barang - diskon) + ppn;
+
+            //output
+            alert(`Nama Pelanggan : ${nama} \nBarang : ${barang} \nJumlah : ${jumlah} \nHarga : ${harga} \nDiskon : ${diskon} \nPPN : ${ppn} \nTotal Bayar : ${total_harga}`);
+        }
+    </script>
+</html> 
