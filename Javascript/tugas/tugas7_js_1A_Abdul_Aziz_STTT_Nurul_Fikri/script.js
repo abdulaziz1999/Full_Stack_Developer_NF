@@ -8,10 +8,15 @@
             //fungsi dampak
             dampak() {
                 let dampak,isi_tbody
-                if (this.skala <= 2) dampak = "Tidak terasa";
-                else if (this.skala > 2 && this.skala <= 4) dampak = "Retak-retak";
-                else if (this.skala > 4 && this.skala <= 6) dampak = "Roboh";
-                else dampak = "Roboh dan berpotensi tsunami";
+                if (this.skala <= 2) {
+                    dampak = "Tidak terasa";
+                } else if (this.skala > 2 && this.skala <= 4) {
+                    dampak = "Retak-retak";
+                } else if (this.skala > 4 && this.skala <= 6) {
+                    dampak = "Roboh";
+                } else {
+                    dampak = "Roboh dan berpotensi tsunami";
+                }
 
                 //Tampilkan hasil pada tag <tbody> dengan id isi_tbody
                 isi_tbody = document.getElementById('isi_tbody');
