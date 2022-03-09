@@ -1,0 +1,38 @@
+<script>
+    //-----------------membuat class------------------
+    class Bank {
+        //member1 & 2 : variabel dan konstruktor
+        constructor(norek, nasabah, saldo) {
+            this.no = norek;
+            this.nama = nasabah;
+            this.saldo = saldo;
+        }
+        //member3 fungsi2
+        menabung(uang) {
+            //this.saldo = this.saldo + uang;
+            this.saldo += uang;
+        }
+        menarik(uang) {
+            //this.saldo = this.saldo - uang;
+            this.saldo -= uang;
+        }
+        mencetak() {
+            document.write(`No. Rekening: ${this.no}
+            <br/>Nama Nasabah: ${this.nama}
+            <br/>Saldo: ${this.saldo}<hr/>`);
+        }
+    }
+    //---------------ciptakan object------------------
+    let gigi = new Bank('001', 'Buffon', 8000000);
+    let cr7 = new Bank('007', 'Ronaldo', 7000000);
+    let leo = new Bank('030', 'Messi', 3000000);
+    //menggunakan member class
+    gigi.menabung(1000000);
+    cr7.menabung(2000000);
+    leo.menabung(6000000);
+    cr7.menarik(5000000);
+    leo.menarik(2000000);
+    gigi.mencetak();
+    cr7.mencetak();
+    leo.mencetak();
+</script>

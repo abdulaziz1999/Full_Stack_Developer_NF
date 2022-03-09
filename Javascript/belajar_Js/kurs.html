@@ -1,0 +1,49 @@
+<form id="formulir">
+    <input type="text" id="harga" name="harga" value="Harga Produk" />
+    <input type="text" name="jumlah" value="Jumlah Beli" />
+    <select name="valas" onchange="kurs()">
+        <option value="">--Pilih Valas --</option>
+        <option value="15880">EURO</option>
+        <option value="14575">USD</option>
+        <option value="128">JPY</option>
+    </select>
+    <input type="text" name="hasil" value="" disabled />
+    <button type="button" name="batal" onclick="batal()">Batal</button>
+</form>
+<script>
+
+    //onfocus looping
+    let form = document.getElementById('formulir');
+    let input = form.getElementsByTagName('input');
+    for (let i = 0; i < input.length; i++) {
+        input[i].onfocus = function() {
+            this.value = '';
+        }
+    }
+    
+
+    //function kurs onchange
+    const kurs = () => {
+        let harga = form.harga.value;
+        let jumlah = form.jumlah.value;
+        let valas = form.valas.value;
+
+        //validate if else harga and jumlah not empty
+        if(harga === '' || jumlah === ''){
+            alert('Harga dan Jumlah tidak boleh kosong');
+        }
+
+
+        let hasil = harga * jumlah * valas;
+        form.hasil.value = hasil;
+    }
+
+    //onclik batal clear value select
+    const batal = () => {
+        form.harga.value = '';
+        form.jumlah.value = '';
+        form.valas.value = '';
+        form.hasil.value = '';
+    }
+
+</script>

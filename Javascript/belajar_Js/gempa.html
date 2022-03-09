@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gempa</title>
+    <style>
+        #tableStyle {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+  #tableStyle td, #tableStyle th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tableStyle tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #tableStyle tr:hover {background-color: #ddd;}
+  
+  #tableStyle th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+
+    h1{
+        text-align: center;
+    }
+    table {
+        border-radius: 1em;
+        overflow: hidden;
+    }
+
+    #divBg {
+        border-radius: 25px; 
+        background-color: white;
+        padding: 15px;
+    }
+    </style>
+</head>
+<body>
+    
+    <div id="divBg" align="center">
+        <h1>Data Gempa</h1>
+        <table border="1" id="tableStyle">
+            <thead>
+                <tr>
+                    <th>Lokasi</th>
+                    <th>Skala</th>
+                    <th>Dampak</th>
+                </tr>
+            </thead>
+            <tbody id="isi_tbody"></tbody>
+        </table>
+    </div>
+
+    <script>
+
+class Gempa {
+            constructor(lokasi, skala) {
+                this.lokasi = lokasi;
+                this.skala = skala;
+            }
+
+            //fungsi dampak
+            dampak() {
+                let dampak,isi_tbody
+                if (this.skala <= 2) {
+                    dampak = "Tidak terasa";
+                } else if (this.skala > 2 && this.skala <= 4) {
+                    dampak = "Retak-retak";
+                } else if (this.skala > 4 && this.skala <= 6) {
+                    dampak = "Roboh";
+                } else {
+                    dampak = "Roboh dan berpotensi tsunami";
+                }
+
+                //Tampilkan hasil pada tag <tbody> dengan id isi_tbody
+                isi_tbody = document.getElementById('isi_tbody');
+                isi_tbody.innerHTML += `<tr>
+                                            <td>${this.lokasi}</td>
+                                            <td>${this.skala}</td>
+                                            <td>${dampak}</td>
+                                        </tr>`;
+            }
+        }
+
+        //cetak dampak
+        let gempa_1 = new Gempa("Jakarta", 2);
+        let gempa_2 = new Gempa("Bandung", 3);
+        let gempa_3 = new Gempa("Semarang", 4);
+        let gempa_4 = new Gempa("Surabaya", 5);
+        let gempa_5 = new Gempa("Medan", 6);
+        let gempa_6 = new Gempa("Palembang", 7);
+        let gempa_7 = new Gempa("Pekanbaru", 8);
+        let gempa_8 = new Gempa("Bogor", 9);
+        let gempa_9 = new Gempa("Jakarta", 10);
+        let gempa_10 = new Gempa("Bandung", 11);
+        
+        gempa_1.dampak();
+        gempa_2.dampak();
+        gempa_3.dampak();
+        gempa_4.dampak();
+        gempa_5.dampak();
+        gempa_6.dampak();
+        gempa_7.dampak();
+        gempa_8.dampak();
+        gempa_9.dampak();
+        gempa_10.dampak();
+    </script>
+</body>
+</html>
