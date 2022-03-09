@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>latihan effect fade</title>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript">
+            $("document").ready(function () {
+                $(".fadeout").click(function () {
+                    $("#kotak").fadeOut("slow");
+                });
+                $(".fadein").click(function () {
+                    $("#kotak").fadeIn("slow");
+                });
+                $(".fadeto3").click(function () {
+                    $("#kotak").fadeTo("slow", 0.3);
+                });
+            });
+        </script>
+        <style type="text/css">
+            #kotak {
+                width: 250px;
+                height: 180px;
+                background: greenyellow;
+                border: 2px dashed red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="kotak"></div><br />
+        <button class="fadeout">Fade Out</button>
+        <button class="fadein">Fade In</button>
+        <button class="fadeto3">Fade To 0.3</button>
+    </body>
+
+</html>

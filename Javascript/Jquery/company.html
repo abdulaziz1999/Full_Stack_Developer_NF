@@ -1,0 +1,58 @@
+<!-- Buatlah Program Sederhana menggunakan Jquery untuk menampilkan populasi data,
+ketika event mouse mengklik salah satu pilihan bidang berdasarkan masing-masing judul.
+Company Profile => Menampilkan Company Profile NF Computer
+Visi & Misi => Menampilkan Visi & Misi NF Computer
+Deskripsi Bisnis => Menampilkan Deskripsi Bisnis NF Computer
+Gunakan method slideToggle bawaan dari Jquery.
+Sumber data: https://nurulfikri.com/profile-lembaga/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hewan</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function () {
+            $(".flip").click(function () {
+                $(".pesan").slideToggle("slow");
+            });
+        });
+    </script>
+    <style type="text/css">
+        div.pesan {
+            height: 175px;
+            width: 300px;
+            display: none;
+            border-radius: 5px;
+        }
+
+        div.pesan,
+        p.flip {
+            margin: 0px;
+            padding: 5px;
+            text-align: center;
+            width: 300px;
+            background: greenyellow;
+            border: 20px ridge red;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+        <div class="pesan">
+            Dalam Hadits yang diriwayatkan Ad-Dailamy, Rasulullah SAW
+            bersabda: <br />
+            <p>
+                Sesungguhnya pintu-pintu kebaikan itu banyak: tasbih, tahmid,
+                takbir, tahlil (dzikir), amar ma'ruf
+                nahi munkar, menyingkirkan penghalang (duri, batu) dari
+                jalan, menolong orang, sampai senyum kepada
+                saudara pun adalah sedekah.
+            </p>
+        </div>
+        <p class="flip"> Tampilkan/Sembunyikan Hadits</p>
+</body>
+</html>

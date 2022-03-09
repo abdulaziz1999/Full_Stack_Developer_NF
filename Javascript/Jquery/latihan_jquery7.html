@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>latihan effect 1</title>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript">
+            $("document").ready(function () {
+                $(".flip").click(function () {
+                    $(".pesan").slideToggle("slow");
+                });
+            });
+        </script>
+        <style type="text/css">
+            div.pesan {
+                height: 175px;
+                width: 300px;
+                display: none;
+            }
+
+            div.pesan,
+            p.flip {
+                margin: 0px;
+                padding: 5px;
+                text-align: center;
+                width: 300px;
+                background: greenyellow;
+                border: 20px ridge red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center>
+            <div class="pesan">
+                Dalam Hadits yang diriwayatkan Ad-Dailamy, Rasulullah SAW
+                bersabda: <br />
+                <p>
+                    Sesungguhnya pintu-pintu kebaikan itu banyak: tasbih, tahmid,
+                    takbir, tahlil (dzikir), amar ma'ruf
+                    nahi munkar, menyingkirkan penghalang (duri, batu) dari
+                    jalan, menolong orang, sampai senyum kepada
+                    saudara pun adalah sedekah.
+                </p>
+            </div>
+            <p class="flip"> Tampilkan/Sembunyikan Hadits</p>
+        </center>
+    </body>
+
+</html>

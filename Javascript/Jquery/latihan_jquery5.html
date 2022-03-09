@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Latihan 5 Jquery - Event</title>
+        <script src="js/jquery.js"></script>
+        <script>
+            $("document").ready(function () {
+                $("div.kuda").mouseover(function () {
+                    $(this).css({
+                        background: "url('images/jempol.gif')"
+                    });
+                });
+                $("div.kuda").mouseout(function () {
+                    $(this).css({
+                        background: "greenyellow"
+                    });
+                });
+                $("div.kambing").mouseover(function () {
+                    $(this).css({
+                        background: "url('images/musik.gif')"
+                    });
+                });
+                $("div.kambing").mouseout(function () {
+                    $(this).css({
+                        background: "greenyellow"
+                    });
+                });
+            });
+        </script>
+        <style type="text/css">
+            div {
+                background: greenyellow;
+                width: 60px;
+                height: 60px;
+                float: left;
+                margin: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>Dekati pada setiap kotak untuk menampilkan hewan</p>
+        <div class="kuda">Ini Hewan Kuda</div>
+        <div class="kambing">Ini Hewan Kambing</div>
+        <div class="babi">Ini Hewan Babi</div>
+        <div class="sapi">ini Hewan Sapi</div>
+    </body>
+
+</html>
