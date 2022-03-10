@@ -1,30 +1,28 @@
-<!-- Buatlah Program Sederhana menggunakan Jquery untuk menampilkan populasi data,
-ketika event mouse mengklik salah satu pilihan bidang berdasarkan masing-masing judul.
-Company Profile => Menampilkan Company Profile NF Computer
-Visi & Misi => Menampilkan Visi & Misi NF Computer
-Deskripsi Bisnis => Menampilkan Deskripsi Bisnis NF Computer
-Gunakan method slideToggle bawaan dari Jquery.
-Sumber data: https://nurulfikri.com/profile-lembaga/ -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hewan</title>
+    <title>Company</title>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
         $("document").ready(function () {
             $(".flip").click(function () {
                 $(".pesan").slideToggle("slow");
             });
+            $(".flip2").click(function () {
+                $(".pesan2").slideToggle("slow");
+            });
+            $(".flip3").click(function () {
+                $(".pesan3").slideToggle("slow");
+            });
         });
     </script>
     <style type="text/css">
         div.pesan {
-            height: 175px;
-            width: 300px;
+            height: 400px;
+            width: 500px;
             display: none;
             border-radius: 5px;
         }
@@ -34,25 +32,116 @@ Sumber data: https://nurulfikri.com/profile-lembaga/ -->
             margin: 0px;
             padding: 5px;
             text-align: center;
-            width: 300px;
-            background: greenyellow;
-            border: 20px ridge red;
+            width: 500px;
+            background: #F4EEA9;
+            border: 5px ridge #F0BB62;
             border-radius: 5px;
+        }
+
+        div.pesan2 {
+            height: 400px;
+            width: 500px;
+            display: none;
+            border-radius: 5px;
+        }
+
+        div.pesan2,
+        p.flip2 {
+            margin: 0px;
+            padding: 5px;
+            text-align: center;
+            width: 500px;
+            background: #F4EEA9;
+            border: 5px ridge #F0BB62;
+            border-radius: 5px;
+        }
+
+        div.pesan3 {
+            height: 600px;
+            width: 500px;
+            display: none;
+            border-radius: 5px;
+        }
+
+        div.pesan3,
+        p.flip3 {
+            margin: 0px;
+            padding: 5px;
+            text-align: center;
+            width: 500px;
+            background: #F4EEA9;
+            border: 5px ridge #F0BB62;
+            border-radius: 5px;
+        }
+
+        p, li {
+            text-align: justify;
         }
     </style>
 </head>
-<body>
-        <div class="pesan">
-            Dalam Hadits yang diriwayatkan Ad-Dailamy, Rasulullah SAW
-            bersabda: <br />
-            <p>
-                Sesungguhnya pintu-pintu kebaikan itu banyak: tasbih, tahmid,
-                takbir, tahlil (dzikir), amar ma'ruf
-                nahi munkar, menyingkirkan penghalang (duri, batu) dari
-                jalan, menolong orang, sampai senyum kepada
-                saudara pun adalah sedekah.
-            </p>
-        </div>
-        <p class="flip"> Tampilkan/Sembunyikan Hadits</p>
+<body >
+        <center>
+            <h3>NF Computer</h3>
+            <div class="pesan">
+                <h3>Profile</h3>
+                <p>
+                    NF COMPUTER adalah bagian dari grup Nurul Fikri yang telah dipercaya oleh masyarakat Indonesia di bidang pendidikan dan peningkatan sumber daya manusia selama lebih dari 24 tahun. Alumni-alumninya telah berkiprah dan diakui kualitas kerja dan integritasnya oleh dunia usaha.
+                </p>
+                <p>
+                    NF COMPUTER dirintis sejak tahun 1994 dan merupakan sebuah lembaga di bidang pendidikan dan pelatihan IT (Information Technology). Kami berkomitmen menjadi partner perusahaan Anda dalam mengembangkan kemampuan serta keahlian SDM di bidang IT. Dengan komitmen tersebut, kami mempersiapkan tim pengajar yang professional dan berpengalaman di bidang IT.
+                </p>
+                <p>
+                    Di Era Industri 4.0 saat ini, teknologi informasi berkembang sangat cepat, oleh karena itu pengembangan sumber daya manusia di bidang IT menjadi sebuah kebutuhan yang perlu diprioritaskan. NF COMPUTER menjadi jawaban yang tepat atas kebutuhan pengembangan kompetensi IT. Sehingga kami selalu berusaha untuk terus berinovasi terhadap teknologi terbaru.
+                </p>
+            </div>
+            <p class="flip">Tampilkan Company Profile</p>
+    
+            <div class="pesan2">
+                <h3>Visi & Misi</h3> <br />
+                <h4>Visi</h4>
+                <p>
+                    Menjadi institusi pelatihan yang kompeten dan profesional di bidang pendidikan teknologi informasi dan komunikasi di berbagai wilayah indonesia.
+                </p>
+                <h4>Misi</h4>
+                <p>
+                    Membangun, memelihara dan mengembangkan institusi pelatihan bisnis berdaya saing tinggi, berkarakter profesional, kompeten, mengedepankan integritas dan tanggung jawab sosial, dengan mengembangkan dan menyediakan produk produk pendidikan dan pelatihan teknologi informasi dan komunikasi prima.
+                </p>
+            </div>
+            <p class="flip2">Tampilkan Visi & Misi</p>
+    
+            <div class="pesan3">
+                <h3>Deskripsi Bisnis</h3> <br />
+                <p>
+                    NF COMPUTER menyelenggarakan Pelatihan dan Pendidikan di bidang Teknologi Informasi dan Komunikasi (IT Training) yang dibagi menjadi lima produk.
+                </p>
+                <p>
+                    Pelatihan (training) ini dibagi dalam beberapa kategori produk yaitu :
+                </p>
+                <ul>
+                    <li>
+                        Public Class, merupakan short course bidang TIK (Teknologi Informasi dan Komunikasi) yang berbasis Linux maupun Windows.
+                    </li>
+                    <li>
+                        Exclusive Class, merupakan paket training yang diberikan kepada customer dengan durasi 6-8 jam perhari dengan jumlah peserta minimal 2 orang dan pelaksanaan pelatihannya di NF Computer.
+                    </li>
+                    <li>
+                        In House/In Company Training, yaitu pelatihan TIK yang dikustomisasi untuk kebutuhan perusahaan-perusahaan
+                    </li>
+                </ul>
+
+                <p>
+                    Paket bisnis khusus dibagi ke dalam beberapa kategori produk yang dikelola secara profesional oleh NF COMPUTER yaitu :
+                </p>
+                <ul>
+                    <li>
+                        Kerjasama Pendidikan Sekolah, yaitu Divisi khusus pendidikan sekolah dimana NF COMPUTER bekerjasama dalam hal : Kerjasama pembangunan Lab Komputer, Pengajaran Komputer dan kombinasi antara keduanya.
+                    </li>
+                    <li>
+                        Usulan Produk lain: Produk-produk yang menurut lokasi diminati oleh pasar tapi belum ada dalam daftar produk pelatihan dan pendidikan NF COMPUTER, dapat diajukan oleh cabang untuk menjadi produk yang dipertimbangkan sebagai produk dan akan menjadi bagian dari penyelenggaraan pelatiahan dan pendidikan di cabang tersebut pada periode yang dianggap tepat oleh NF COMPUTER.
+                    </li>
+                </ul>
+            </div>
+            <p class="flip3">Tampilkan Deskripsi Bisnis</p>
+        </center>
 </body>
 </html>
