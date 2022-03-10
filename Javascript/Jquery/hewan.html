@@ -1,55 +1,150 @@
 <!-- Buatlah Program Sederhana menggunakan Jquery untuk menampilkan gambar dan suara hewan,
 ketika event mouse mengklik salah satu pilihan bidang berdasarkan masing-masing hewan. -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hewan</title>
+    <title>Suara Hewan</title>
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script src="js/jquery.js"></script>
-        <script>
-            $("document").ready(function () {
-                $("div.kuda").mouseover(function () {
-                    $(this).css({
-                        background: "url('images/jempol.gif')"
-                    });
-                });
-                $("div.kuda").mouseout(function () {
-                    $(this).css({
-                        background: "greenyellow"
-                    });
-                });
-                $("div.kambing").mouseover(function () {
-                    $(this).css({
-                        background: "url('images/musik.gif')"
-                    });
-                });
-                $("div.kambing").mouseout(function () {
-                    $(this).css({
-                        background: "greenyellow"
-                    });
+    <script type="text/javascript">
+        $("document").ready(function () {
+            $("div.gajah").click(function () {
+                $(this).css({
+                    background: "url('images/gajah.jpg')",
                 });
             });
-        </script>
-        <style type="text/css">
-            div {
-                background: greenyellow;
-                width: 60px;
-                height: 60px;
-                float: left;
-                margin: 10px;
-                cursor: pointer;
-            }
-        </style>
+            $("div.gajah").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/gajah.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+            $("div.gajah").mouseout(function () {
+                $(this).css({
+                    background: "#F0BB62"
+                });
+            });
+            $("div.harimau").click(function () {
+                $(this).css({
+                    background: "url('images/harimau.jpg')",
+                });
+            });
+            $("div.harimau").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/harimau.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+            $("div.harimau").mouseout(function () {
+                $(this).css({
+                    background: "#F0BB62"
+                });
+            });
+            $("div.elang").click(function () {
+                $(this).css({
+                    background: "url('images/elang.jpg')"
+                });
+            });
+            $("div.elang").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/elang.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+            $("div.elang").mouseout(function () {
+                $(this).css({
+                    background: "#F0BB62"
+                });
+            });
+            $("div.kuda").click(function () {
+                $(this).css({
+                    background: "url('images/kuda.jpg')"
+                });
+            });
+            $("div.kuda").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/kuda.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+            $("div.kuda").mouseout(function () {
+                $(this).css({
+                    background: "#F0BB62"
+                });
+            });
+            $("div.owl").click(function () {
+                $(this).css({
+                    background: "url('images/owl.jpg')"
+                });
+            });
+            $("div.owl").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/owl.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("div");
+            });
+            $("div.owl").mouseout(function () {
+                $(this).css({
+                    background: "#F0BB62"
+                });
+            });
+        });
+    </script>
+    <style type="text/css">
+        div {
+            background: #519259;
+            width: 250px;
+            height: 156px;
+            float: left;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 7px;
+        }
+
+        #bg {
+            background: #064635;
+            width: 250px;
+            height: 156px;
+            float: left;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 7px;
+        }
+
+        p{
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <p>Dekati pada setiap kotak untuk menampilkan hewan</p>
-    <div class="kuda">Ini Hewan Kuda</div>
-    <div class="kambing">Ini Hewan Kambing</div>
-    <div class="babi">Ini Hewan Babi</div>
-    <div class="sapi">ini Hewan Sapi</div>
+    <h3>silahkan klik kotak dibawah ini Untuk memunculkan gambar dan suara</h3>
+    <div id="bg">
+        <div class="gajah"></div>
+        <p>Gajah</p>
+    </div>
+    <div id="bg">
+        <div class="harimau"></div>
+        <p>Harimau</p>
+    </div>
+    <div id="bg">
+        <div class="elang"></div>
+        <p>Elang</p>
+    </div>
+    <div id="bg">
+        <div class="kuda"></div>
+        <p>Kuda</p>
+    </div>
+    <div id="bg">
+        <div class="owl"></div>
+        <p>Owl</p>
+    </div>
 </body>
+
 </html>
