@@ -1,3 +1,4 @@
+    <?php include_once 'detail.php'; ?>
     <main class="main-content  mt-0">
         <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg'); background-position: top;">
         <span class="mask bg-gradient-dark opacity-6"></span>
@@ -7,9 +8,9 @@
                     <h1 class="text-white mb-2 mt-5">Welcome!</h1>
                     <p class="text-lead text-white">Course <b>Full Stack Web Developer</b>.</p>
                     <a href="javascript:;">
-                      <img src="./assets/img/logos/php.png" width="100" height="200" class="rounded-circle img-fluid border border-2 border-white">
+                      <img src="<?= $img?>" width="100" height="200" class="rounded-circle img-fluid border border-2 border-white">
                     </a>
-                    <h5 class="text-white mb-2 mt-2">Hypertext Preprocessor</h5>
+                    <h5 class="text-white mb-2 mt-2"><?= $judul?></h5>
                 </div>
               </div>
               <a href="index.php" class="text-white"><i class="fas fa-arrow-left"></i>&nbsp;<b>Back to course</b></a>
@@ -20,7 +21,7 @@
             <div class="col-xl-12 col-lg-12 col-md-12 ">
               <div class="card z-index-0 mb-4">
                 <div class="card-header text-center pt-4">
-                  <h5>Task PHP</h5>
+                  <h5>Task <?= $judul?></h5>
                 </div>
                 <div class="card-body mb-5">
                   <div class="accordion-1">
