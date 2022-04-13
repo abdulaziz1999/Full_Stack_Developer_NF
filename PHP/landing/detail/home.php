@@ -19,8 +19,8 @@
     <div class="container">
       <div class="row mt-lg-n20 mt-md-n11 mt-n10 col-lg-12 justify-content-center">
         <!-- WEB -->
-        <div class="col-xl-3 col-lg-3 col-md-3">
-            <a href="javascript:;">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <a href="index.php?materi=designweb">
                 <div class="card z-index-0 mb-4">
                     <div class="card-header text-center pt-4">
                     </div>
@@ -39,8 +39,8 @@
             </a>
         </div>
         <!-- Javascript -->
-        <div class="col-xl-3 col-lg-3 col-md-3">
-            <a href="javascript:;">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <a href="index.php?materi=javascript">
                 <div class="card z-index-0 mb-4">
                     <div class="card-header text-center pt-4">
                     </div>
@@ -59,7 +59,7 @@
             </a>
         </div>
         <!-- PHP -->
-        <div class="col-xl-3 col-lg-3 col-md-3 ">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
             <a href="index.php?materi=php">
                 <div class="card z-index-0 mb-4">
                     <div class="card-header text-center pt-4">
@@ -79,8 +79,8 @@
             </a>
         </div>
         <!-- UI/UX -->
-        <div class="col-xl-3 col-lg-3 col-md-3">
-            <a href="javascript:;">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <a href="index.php?materi=uiux">
                 <div class="card z-index-0 mb-4">
                     <div class="card-header text-center pt-4">
                     </div>
@@ -99,8 +99,8 @@
             </a>
         </div>
         <!-- Github -->
-        <div class="col-xl-3 col-lg-3 col-md-3">
-            <a href="javascript:;">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <a href="index.php?materi=github">
                 <div class="card z-index-0 mb-4">
                     <div class="card-header text-center pt-4">
                     </div>
@@ -119,8 +119,8 @@
             </a>
         </div>
         <!-- Database -->
-        <div class="col-xl-3 col-lg-3 col-md-3">
-            <a href="javascript:;">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <a href="mysql">
                 <div class="card z-index-0 mb-4">
                     <div class="card-header text-center pt-4">
                     </div>
@@ -139,8 +139,8 @@
             </a>
         </div>
         <!-- Laravel -->
-        <div class="col-xl-3 col-lg-3 col-md-3">
-            <a href="javascript:;">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <a href="index.php?materi=laravel">
                 <div class="card z-index-0 mb-4">
                     <div class="card-header text-center pt-4">
                     </div>
@@ -159,8 +159,8 @@
             </a>
         </div>
         <!-- Rest API -->
-        <div class="col-xl-3 col-lg-3 col-md-3">
-            <a href="javascript:;">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <a href="index.php?materi=restapi">
                 <div class="card z-index-0 mb-4">
                     <div class="card-header text-center pt-4">
                     </div>
