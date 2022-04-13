@@ -5,7 +5,7 @@
                 <h1 class="display-1 text-bolder text-primary">Error 404</h1>
                 <h2>Erm. Page not found</h2>
                 <p class="lead">We suggest you to go to the homepage while we solve this issue.</p>
-                <a href="landing.php" type="button" class="btn bg-gradient-danger mt-4">Go to Homepage</a>
+                <a href="index.php" type="button" class="btn bg-gradient-danger mt-4">Go to Homepage</a>
             </div>
         </div>
     </div>
