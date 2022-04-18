@@ -1,0 +1,330 @@
+========================================================================================================================
+- masuk ke ruang dbpegawai melalui CMD & tampilkan deskripsi tabel pegawai
+./mysql -u root -p                                                                                                                                                  
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 86
+Server version: 10.4.11-MariaDB Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use dbpegawai;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [dbpegawai]> desc pegawai;                                      
++-------------+---------------+------+-----+---------+----------------+
+| Field       | Type          | Null | Key | Default | Extra          |
++-------------+---------------+------+-----+---------+----------------+
+| id          | int(11)       | NO   | PRI | NULL    | auto_increment |
+| nip         | char(5)       | NO   | UNI | NULL    |                |
+| nama        | varchar(30)   | NO   |     | NULL    |                |
+| gender      | enum('L','P') | NO   |     | NULL    |                |
+| umur        | int(11)       | NO   |     | NULL    |                |
+| berat_badan | float         | YES  |     | NULL    |                |
++-------------+---------------+------+-----+---------+----------------+
+6 rows in set (0.033 sec)
+
+========================================================================================================================
+- lakukan pada tabel pegawai sebagai berikut:
+1. tambah kolom baru setelah berat_badan: foto varchar(30) tidak wajib diisi
+MariaDB [dbpegawai]> alter table pegawai add foto varchar(30);
+Query OK, 0 rows affected (0.190 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [dbpegawai]> desc pegawai;                                      
++-------------+---------------+------+-----+---------+----------------+
+| Field       | Type          | Null | Key | Default | Extra          |
++-------------+---------------+------+-----+---------+----------------+
+| id          | int(11)       | NO   | PRI | NULL    | auto_increment |
+| nip         | char(5)       | NO   | UNI | NULL    |                |
+| nama        | varchar(30)   | NO   |     | NULL    |                |
+| gender      | enum('L','P') | NO   |     | NULL    |                |
+| umur        | int(11)       | NO   |     | NULL    |                |
+| berat_badan | float         | YES  |     | NULL    |                |
+| foto        | varchar(30)   | YES  |     | NULL    |                |
++-------------+---------------+------+-----+---------+----------------+
+7 rows in set (0.003 sec)
+
+========================================================================================================================
+2. ubah nama kolom gender menjadi jenis_kelamin
+MariaDB [dbpegawai]> alter table pegawai change gender jenis_kelamin enum('L','P');
+Query OK, 0 rows affected (0.109 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [dbpegawai]> desc pegawai;                                      
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| id            | int(11)       | NO   | PRI | NULL    | auto_increment |
+| nip           | char(5)       | NO   | UNI | NULL    |                |
+| nama          | varchar(30)   | NO   |     | NULL    |                |
+| jenis_kelamin | enum('L','P') | YES  |     | NULL    |                |
+| umur          | int(11)       | NO   |     | NULL    |                |
+| berat_badan   | float         | YES  |     | NULL    |                |
+| foto          | varchar(30)   | YES  |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+7 rows in set (0.003 sec)
+
+========================================================================================================================
+3. ubah tipe data umur dari int ke float
+MariaDB [dbpegawai]> alter table pegawai modify umur float;
+Query OK, 0 rows affected (0.097 sec)              
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [dbpegawai]> desc pegawai;                                      
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| id            | int(11)       | NO   | PRI | NULL    | auto_increment |
+| nip           | char(5)       | NO   | UNI | NULL    |                |
+| nama          | varchar(30)   | NO   |     | NULL    |                |
+| jenis_kelamin | enum('L','P') | YES  |     | NULL    |                |
+| umur          | float         | YES  |     | NULL    |                |
+| berat_badan   | float         | YES  |     | NULL    |                |
+| foto          | varchar(30)   | YES  |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+7 rows in set (0.002 sec)
+
+========================================================================================================================
+4. ubah nama tabel pegawai menjadi staff
+MariaDB [dbpegawai]> alter table pegawai rename to staff;
+Query OK, 0 rows affected (0.030 sec)
+
+MariaDB [dbpegawai]> desc pegawai;
+ERROR 1146 (42S02): Table 'dbpegawai.pegawai' doesn't exist
+MariaDB [dbpegawai]> desc staff;
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| id            | int(11)       | NO   | PRI | NULL    | auto_increment |
+| nip           | char(5)       | NO   | UNI | NULL    |                |
+| nama          | varchar(30)   | NO   |     | NULL    |                |
+| jenis_kelamin | enum('L','P') | YES  |     | NULL    |                |
+| umur          | float         | YES  |     | NULL    |                |
+| berat_badan   | float         | YES  |     | NULL    |                |
+| foto          | varchar(30)   | YES  |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+7 rows in set (0.004 sec)
+
+========================================================================================================================
+5. input tabel staff tanpa menyebutkan kolom2nya sebanyak 5 staff.
+MariaDB [dbpegawai]> INSERT INTO staff VALUES
+    -> (DEFAULT,'01101','Abdul Aziz','L',22,56.0,'Aziz.jpg'),
+    -> (DEFAULT,'01102','Ayu Wirum','P',21,55.0,'Wirum.jpg'),
+    -> (DEFAULT,'01103','Bagus','L',20,54.0,'Bagus.jpg'),
+    -> (DEFAULT,'01104','Ani','P',19,53.0,'Ani.jpg'),
+    -> (DEFAULT,'01105','Budi','L',18,52.0,'Budi.jpg');
+Query OK, 5 rows affected (0.008 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [dbpegawai]> select * from staff;
++----+-------+------------+---------------+------+-------------+-----------+
+| id | nip   | nama       | jenis_kelamin | umur | berat_badan | foto      |
++----+-------+------------+---------------+------+-------------+-----------+
+|  1 | 01101 | Abdul Aziz | L             |   22 |          56 | Aziz.jpg  |
+|  2 | 01102 | Ayu Wirum  | P             |   21 |          55 | Wirum.jpg |
+|  3 | 01103 | Bagus      | L             |   20 |          54 | Bagus.jpg |
+|  4 | 01104 | Ani        | P             |   19 |          53 | Ani.jpg   |
+|  5 | 01105 | Budi       | L             |   18 |          52 | Budi.jpg  |
++----+-------+------------+---------------+------+-------------+-----------+
+5 rows in set (0.002 sec)
+
+========================================================================================================================
+6. input tabel staff dengan menyebutkan kolom2nya sebanyak 5 staff.
+MariaDB [dbpegawai]> INSERT INTO staff (nip,nama,jenis_kelamin,umur,berat_badan,foto) VALUES
+    -> ('01106','Caca','L',17,51.0,'Caca.jpg'),
+    -> ('01107','Dede','P',16,50.0,'Dede.jpg'),
+    -> ('01108','Eka','L',15,49.0,'Eka.jpg'),
+    -> ('01109','Fafa','P',14,48.0,'Fafa.jpg'),
+    -> ('01110','Gaga','L',13,47.0,'Gaga.jpg');
+Query OK, 5 rows affected (0.008 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [dbpegawai]> select * from staff;
++----+-------+------------+---------------+------+-------------+-----------+
+| id | nip   | nama       | jenis_kelamin | umur | berat_badan | foto      |
++----+-------+------------+---------------+------+-------------+-----------+
+|  1 | 01101 | Abdul Aziz | L             |   22 |          56 | Aziz.jpg  |
+|  2 | 01102 | Ayu Wirum  | P             |   21 |          55 | Wirum.jpg |
+|  3 | 01103 | Bagus      | L             |   20 |          54 | Bagus.jpg |
+|  4 | 01104 | Ani        | P             |   19 |          53 | Ani.jpg   |
+|  5 | 01105 | Budi       | L             |   18 |          52 | Budi.jpg  |
+|  6 | 01106 | Caca       | L             |   17 |          51 | Caca.jpg  |
+|  7 | 01107 | Dede       | P             |   16 |          50 | Dede.jpg  |
+|  8 | 01108 | Eka        | L             |   15 |          49 | Eka.jpg   |
+|  9 | 01109 | Fafa       | P             |   14 |          48 | Fafa.jpg  |
+| 10 | 01110 | Gaga       | L             |   13 |          47 | Gaga.jpg  |
++----+-------+------------+---------------+------+-------------+-----------+
+10 rows in set (0.000 sec)
+
+========================================================================================================================
+7. lakukan queri ubah data di satu kolom sebanyak 2x kali (bebas)
+MariaDB [dbpegawai]> update staff set foto = 'Abdul Aziz.png' where id = 1;
+Query OK, 1 row affected (0.020 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [dbpegawai]> select * from staff;
++----+-------+------------+---------------+------+-------------+----------------+
+| id | nip   | nama       | jenis_kelamin | umur | berat_badan | foto           |
++----+-------+------------+---------------+------+-------------+----------------+
+|  1 | 01101 | Abdul Aziz | L             |   22 |          56 | Abdul Aziz.png |
+|  2 | 01102 | Ayu Wirum  | P             |   21 |          55 | Wirum.jpg      |
+|  3 | 01103 | Bagus      | L             |   20 |          54 | Bagus.jpg      |
+|  4 | 01104 | Ani        | P             |   19 |          53 | Ani.jpg        |
+|  5 | 01105 | Budi       | L             |   18 |          52 | Budi.jpg       |
+|  6 | 01106 | Caca       | L             |   17 |          51 | Caca.jpg       |
+|  7 | 01107 | Dede       | P             |   16 |          50 | Dede.jpg       |
+|  8 | 01108 | Eka        | L             |   15 |          49 | Eka.jpg        |
+|  9 | 01109 | Fafa       | P             |   14 |          48 | Fafa.jpg       |
+| 10 | 01110 | Gaga       | L             |   13 |          47 | Gaga.jpg       |
++----+-------+------------+---------------+------+-------------+----------------+
+10 rows in set (0.000 sec)
+
+MariaDB [dbpegawai]> update staff set foto = 'Abdul Aziz Akbar.png' where id = 1;
+Query OK, 1 row affected (0.005 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [dbpegawai]> select * from staff;
++----+-------+------------+---------------+------+-------------+----------------------+
+| id | nip   | nama       | jenis_kelamin | umur | berat_badan | foto                 |
++----+-------+------------+---------------+------+-------------+----------------------+
+|  1 | 01101 | Abdul Aziz | L             |   22 |          56 | Abdul Aziz Akbar.png |
+|  2 | 01102 | Ayu Wirum  | P             |   21 |          55 | Wirum.jpg            |
+|  3 | 01103 | Bagus      | L             |   20 |          54 | Bagus.jpg            |
+|  4 | 01104 | Ani        | P             |   19 |          53 | Ani.jpg              |
+|  5 | 01105 | Budi       | L             |   18 |          52 | Budi.jpg             |
+|  6 | 01106 | Caca       | L             |   17 |          51 | Caca.jpg             |
+|  7 | 01107 | Dede       | P             |   16 |          50 | Dede.jpg             |
+|  8 | 01108 | Eka        | L             |   15 |          49 | Eka.jpg              |
+|  9 | 01109 | Fafa       | P             |   14 |          48 | Fafa.jpg             |
+| 10 | 01110 | Gaga       | L             |   13 |          47 | Gaga.jpg             |
++----+-------+------------+---------------+------+-------------+----------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [dbpegawai]> update staff set umur = 21 where id = 1;
+Query OK, 1 row affected (0.006 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [dbpegawai]> select * from staff;
++----+-------+------------+---------------+------+-------------+----------------------+
+| id | nip   | nama       | jenis_kelamin | umur | berat_badan | foto                 |
++----+-------+------------+---------------+------+-------------+----------------------+
+|  1 | 01101 | Abdul Aziz | L             |   21 |          56 | Abdul Aziz Akbar.png |
+|  2 | 01102 | Ayu Wirum  | P             |   21 |          55 | Wirum.jpg            |
+|  3 | 01103 | Bagus      | L             |   20 |          54 | Bagus.jpg            |
+|  4 | 01104 | Ani        | P             |   19 |          53 | Ani.jpg              |
+|  5 | 01105 | Budi       | L             |   18 |          52 | Budi.jpg             |
+|  6 | 01106 | Caca       | L             |   17 |          51 | Caca.jpg             |
+|  7 | 01107 | Dede       | P             |   16 |          50 | Dede.jpg             |
+|  8 | 01108 | Eka        | L             |   15 |          49 | Eka.jpg              |
+|  9 | 01109 | Fafa       | P             |   14 |          48 | Fafa.jpg             |
+| 10 | 01110 | Gaga       | L             |   13 |          47 | Gaga.jpg             |
++----+-------+------------+---------------+------+-------------+----------------------+
+10 rows in set (0.001 sec)
+
+========================================================================================================================
+8. lakukan queri ubah data di banyak kolom sebanyak 2x kali (bebas)
+MariaDB [dbpegawai]> select * from staff;
++----+-------+------------+---------------+------+-------------+----------------------+
+| id | nip   | nama       | jenis_kelamin | umur | berat_badan | foto                 |
++----+-------+------------+---------------+------+-------------+----------------------+
+|  1 | 01101 | Abdul Aziz | L             |   21 |          56 | Abdul Aziz Akbar.png |
+|  2 | 01102 | Ayu Wirum  | P             |   21 |          55 | Wirum.jpg            |
+|  3 | 01103 | Bagus      | L             |   20 |          54 | Bagus.jpg            |
+|  4 | 01104 | Ani        | P             |   19 |          53 | Ani.jpg              |
+|  5 | 01105 | Budi       | L             |   18 |          52 | Budi.jpg             |
+|  6 | 01106 | Caca       | L             |   17 |          51 | Caca.jpg             |
+|  7 | 01107 | Dede       | P             |   16 |          50 | Dede.jpg             |
+|  8 | 01108 | Eka        | L             |   15 |          49 | Eka.jpg              |
+|  9 | 01109 | Fafa       | P             |   14 |          48 | Fafa.jpg             |
+| 10 | 01110 | Gaga       | L             |   13 |          47 | Gaga.jpg             |
++----+-------+------------+---------------+------+-------------+----------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [dbpegawai]> update staff set nama = 'Ayu Widya Ningrum', umur = 20, berat_badan = 57.1, foto = 'Ayu Wirum.png'  where id = 2;
+Query OK, 1 row affected (0.007 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [dbpegawai]> select * from staff;
++----+-------+-------------------+---------------+------+-------------+----------------------+
+| id | nip   | nama              | jenis_kelamin | umur | berat_badan | foto                 |
++----+-------+-------------------+---------------+------+-------------+----------------------+
+|  1 | 01101 | Abdul Aziz        | L             |   21 |          56 | Abdul Aziz Akbar.png |
+|  2 | 01102 | Ayu Widya Ningrum | P             |   20 |        57.1 | Ayu Wirum.png        |
+|  3 | 01103 | Bagus             | L             |   20 |          54 | Bagus.jpg            |
+|  4 | 01104 | Ani               | P             |   19 |          53 | Ani.jpg              |
+|  5 | 01105 | Budi              | L             |   18 |          52 | Budi.jpg             |
+|  6 | 01106 | Caca              | L             |   17 |          51 | Caca.jpg             |
+|  7 | 01107 | Dede              | P             |   16 |          50 | Dede.jpg             |
+|  8 | 01108 | Eka               | L             |   15 |          49 | Eka.jpg              |
+|  9 | 01109 | Fafa              | P             |   14 |          48 | Fafa.jpg             |
+| 10 | 01110 | Gaga              | L             |   13 |          47 | Gaga.jpg             |
++----+-------+-------------------+---------------+------+-------------+----------------------+
+10 rows in set (0.000 sec)
+
+MariaDB [dbpegawai]> update staff set nama = 'Bagus Satria', umur = 22, berat_badan = 55.8, foto = 'Bagus Satria.png'  where id = 3;
+Query OK, 1 row affected (0.004 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [dbpegawai]> select * from staff;
++----+-------+-------------------+---------------+------+-------------+----------------------+
+| id | nip   | nama              | jenis_kelamin | umur | berat_badan | foto                 |
++----+-------+-------------------+---------------+------+-------------+----------------------+
+|  1 | 01101 | Abdul Aziz        | L             |   21 |          56 | Abdul Aziz Akbar.png |
+|  2 | 01102 | Ayu Widya Ningrum | P             |   20 |        57.1 | Ayu Wirum.png        |
+|  3 | 01103 | Bagus Satria      | L             |   22 |        55.8 | Bagus Satria.png     |
+|  4 | 01104 | Ani               | P             |   19 |          53 | Ani.jpg              |
+|  5 | 01105 | Budi              | L             |   18 |          52 | Budi.jpg             |
+|  6 | 01106 | Caca              | L             |   17 |          51 | Caca.jpg             |
+|  7 | 01107 | Dede              | P             |   16 |          50 | Dede.jpg             |
+|  8 | 01108 | Eka               | L             |   15 |          49 | Eka.jpg              |
+|  9 | 01109 | Fafa              | P             |   14 |          48 | Fafa.jpg             |
+| 10 | 01110 | Gaga              | L             |   13 |          47 | Gaga.jpg             |
++----+-------+-------------------+---------------+------+-------------+----------------------+
+10 rows in set (0.000 sec)
+
+========================================================================================================================
+9. hapus 1 data yang berjenis kelamin laki2
+MariaDB [dbpegawai]> delete from staff where jenis_kelamin = 'L' AND id = 10;
+Query OK, 1 row affected (0.034 sec)
+
+MariaDB [dbpegawai]> select * from staff;
++----+-------+-------------------+---------------+------+-------------+----------------------+
+| id | nip   | nama              | jenis_kelamin | umur | berat_badan | foto                 |
++----+-------+-------------------+---------------+------+-------------+----------------------+
+|  1 | 01101 | Abdul Aziz        | L             |   21 |          56 | Abdul Aziz Akbar.png |
+|  2 | 01102 | Ayu Widya Ningrum | P             |   20 |        57.1 | Ayu Wirum.png        |
+|  3 | 01103 | Bagus Satria      | L             |   22 |        55.8 | Bagus Satria.png     |
+|  4 | 01104 | Ani               | P             |   19 |          53 | Ani.jpg              |
+|  5 | 01105 | Budi              | L             |   18 |          52 | Budi.jpg             |
+|  6 | 01106 | Caca              | L             |   17 |          51 | Caca.jpg             |
+|  7 | 01107 | Dede              | P             |   16 |          50 | Dede.jpg             |
+|  8 | 01108 | Eka               | L             |   15 |          49 | Eka.jpg              |
+|  9 | 01109 | Fafa              | P             |   14 |          48 | Fafa.jpg             |
++----+-------+-------------------+---------------+------+-------------+----------------------+
+9 rows in set (0.000 sec)
+
+========================================================================================================================
+10. hapus 1 data yang berjenis kelamin perempuan
+MariaDB [dbpegawai]> delete from staff where jenis_kelamin = 'P' AND id = 9;
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [dbpegawai]> select * from staff;
++----+-------+-------------------+---------------+------+-------------+----------------------+
+| id | nip   | nama              | jenis_kelamin | umur | berat_badan | foto                 |
++----+-------+-------------------+---------------+------+-------------+----------------------+
+|  1 | 01101 | Abdul Aziz        | L             |   21 |          56 | Abdul Aziz Akbar.png |
+|  2 | 01102 | Ayu Widya Ningrum | P             |   20 |        57.1 | Ayu Wirum.png        |
+|  3 | 01103 | Bagus Satria      | L             |   22 |        55.8 | Bagus Satria.png     |
+|  4 | 01104 | Ani               | P             |   19 |          53 | Ani.jpg              |
+|  5 | 01105 | Budi              | L             |   18 |          52 | Budi.jpg             |
+|  6 | 01106 | Caca              | L             |   17 |          51 | Caca.jpg             |
+|  7 | 01107 | Dede              | P             |   16 |          50 | Dede.jpg             |
+|  8 | 01108 | Eka               | L             |   15 |          49 | Eka.jpg              |
++----+-------+-------------------+---------------+------+-------------+----------------------+
+8 rows in set (0.000 sec)
+========================================================================================================================

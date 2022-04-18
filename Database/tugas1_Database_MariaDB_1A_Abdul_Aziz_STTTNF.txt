@@ -1,0 +1,219 @@
+-- Masuk ke mysql dengan command prompt --
+/opt/lampp/bin  ./mysql -u root -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 13
+Server version: 10.4.11-MariaDB Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> 
+
+
+-- Menampilkan semua database yang sudah di buat --
+MariaDB [(none)]> show databases;
++------------------------------+
+| Database                     |
++------------------------------+
+| 0110219010_Abdul_Aziz_soal_3 |
+| 0110219010_abdul_aziz_soal_2 |
+| PMB                          |
+| absensi_qrcode               |
+| all                          |
+| aset                         |
+| blog                         |
+| blog_db                      |
+| blogdesa                     |
+| botoko                       |
+| ci3_barcode                  |
+| civue                        |
+| cloud_siap                   |
+| crud_db                      |
+| crud_santri                  |
+| db_android                   |
+| db_bis                       |
+| db_desa                      |
+| db_express_api               |
+| db_flask                     |
+| db_inven                     |
+| db_jalan                     |
+| db_kampus                    |
+| db_kampus_new                |
+| db_kepegawaian               |
+| db_koperasi                  |
+| db_liveware                  |
+| db_mutabaah                  |
+| db_ngulemind                 |
+| db_pegawai                   |
+| db_pelaporan                 |
+| db_sekolah                   |
+| db_sista                     |
+| db_stok                      |
+| db_sttnf                     |
+| db_vue                       |
+| djstudent                    |
+| forge                        |
+| information_schema           |
+| laravel                      |
+| laravel1                     |
+| laravel_rest_api             |
+| learnify                     |
+| monitorv2                    |
+| mydb                         |
+| mysql                        |
+| nshehydr_nshe                |
+| performance_schema           |
+| phpmyadmin                   |
+| presensi                     |
+| resapi                       |
+| rest_api_covid               |
+| rest_jwt                     |
+| restful_db                   |
+| sample                       |
+| school                       |
+| sekolahci4                   |
+| seminar                      |
+| test                         |
+| test-pu2                     |
+| testdb                       |
+| undangin                     |
+| webkoperasi                  |
+| yudandan                     |
+| zyacbt                       |
++------------------------------+
+65 rows in set (0.002 sec)
+
+-- buat database baru dbpegawai --
+MariaDB [(none)]> create database dbpegawai;
+Query OK, 1 row affected (0.000 sec)
+
+
+-- masuk keruang database dbpegawai --
+MariaDB [(none)]> use dbpegawai;
+Database changed
+MariaDB [dbpegawai]> 
+
+
+-- menampilkan table2 yang sudah ada di dbpegawai --
+MariaDB [dbpegawai]> show tables;
+Empty set (0.000 sec)
+
+
+-- buat table pegawai dan field-field table --
+MariaDB [dbpegawai]> CREATE TABLE pegawai (
+    ->     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ->     nip CHAR(5) NOT NULL UNIQUE,
+    ->     nama VARCHAR(30) NOT NULL,
+    ->     gender ENUM('L','P') NOT NULL,
+    ->     umur INT NOT NULL,
+    ->     berat_badan float
+    -> );
+Query OK, 0 rows affected (0.021 sec)
+
+-- show tables --
+MariaDB [dbpegawai]> show tables;
++---------------------+
+| Tables_in_dbpegawai |
++---------------------+
+| pegawai             |
++---------------------+
+1 row in set (0.001 sec)
+
+
+-- melihat deskripsi table pegawai yg sudah di buat ---
+MariaDB [dbpegawai]> desc pegawai;
++-------------+---------------+------+-----+---------+----------------+
+| Field       | Type          | Null | Key | Default | Extra          |
++-------------+---------------+------+-----+---------+----------------+
+| id          | int(11)       | NO   | PRI | NULL    | auto_increment |
+| nip         | char(5)       | NO   | UNI | NULL    |                |
+| nama        | varchar(30)   | NO   |     | NULL    |                |
+| gender      | enum('L','P') | NO   |     | NULL    |                |
+| umur        | int(11)       | NO   |     | NULL    |                |
+| berat_badan | float         | YES  |     | NULL    |                |
++-------------+---------------+------+-----+---------+----------------+
+6 rows in set (0.004 sec)
+
+
+-- melihat database yg sudah dibuat --
+MariaDB [dbpegawai]> show databases;
++------------------------------+
+| Database                     |
++------------------------------+
+| 0110219010_Abdul_Aziz_soal_3 |
+| 0110219010_abdul_aziz_soal_2 |
+| PMB                          |
+| absensi_qrcode               |
+| all                          |
+| aset                         |
+| blog                         |
+| blog_db                      |
+| blogdesa                     |
+| botoko                       |
+| ci3_barcode                  |
+| civue                        |
+| cloud_siap                   |
+| crud_db                      |
+| crud_santri                  |
+| db_android                   |
+| db_bis                       |
+| db_desa                      |
+| db_express_api               |
+| db_flask                     |
+| db_inven                     |
+| db_jalan                     |
+| db_kampus                    |
+| db_kampus_new                |
+| db_kepegawaian               |
+| db_koperasi                  |
+| db_liveware                  |
+| db_mutabaah                  |
+| db_ngulemind                 |
+| db_pegawai                   |
+| db_pelaporan                 |
+| db_sekolah                   |
+| db_sista                     |
+| db_stok                      |
+| db_sttnf                     |
+| db_vue                       |
+| dbpegawai                    | ----> dbpegawai
+| djstudent                    |
+| forge                        |
+| information_schema           |
+| laravel                      |
+| laravel1                     |
+| laravel_rest_api             |
+| learnify                     |
+| monitorv2                    |
+| mydb                         |
+| mysql                        |
+| nshehydr_nshe                |
+| performance_schema           |
+| phpmyadmin                   |
+| presensi                     |
+| resapi                       |
+| rest_api_covid               |
+| rest_jwt                     |
+| restful_db                   |
+| sample                       |
+| school                       |
+| sekolahci4                   |
+| seminar                      |
+| test                         |
+| test-pu2                     |
+| testdb                       |
+| undangin                     |
+| webkoperasi                  |
+| yudandan                     |
+| zyacbt                       |
++------------------------------+
+66 rows in set (0.010 sec)
+
+
+
+
+
+
+
