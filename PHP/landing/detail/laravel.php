@@ -32,7 +32,7 @@
                             <div class="accordion-item mb-3">
                               <h5 class="accordion-header" id="headingOne">
                                 <button class="accordion-button border-bottom font-weight-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                  Tugas 8
+                                  Tugas 1
                                   <span class="btn bg-gradient-success btn-sm btn-round collapse-close pt-1 position-absolute end-0 me-5"><i class="fa fa-check"></i></span>
                                   <i class="collapse-close fa fa-chevron-down text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                   <i class="collapse-open fa fa-chevron-down text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
@@ -45,8 +45,8 @@
                                       <div class="row">
                                         <div class="col-lg-6 mb-lg-0 mb-4">
                                           <div class="d-flex flex-column h-100">
-                                            <h5 class="font-weight-bolder">Landing Page 1</h5>
-                                            <p class="mb-5">Boostrap 5.</p>
+                                            <h5 class="font-weight-bolder">Instalasi Composer dan Framework Laravel</h5>
+                                            <p class="mb-5">Diabuat dalam bentuk pdf</p>
                                             <a class="text-dark font-weight-bold ps-1 mb-0 icon-move-left mt-auto" href="javascript:;">
                                               <button class="btn bg-gradient-success btn-sm">
                                                 View 
@@ -72,7 +72,7 @@
                             <div class="accordion-item mb-3">
                               <h5 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                  Tugas 9
+                                  Tugas 2
                                   <span class="btn bg-gradient-success btn-sm btn-round collapse-close pt-1 position-absolute end-0 me-5"><i class="fa fa-check"></i></span>
                                   <i class="collapse-close fa fa-chevron-down text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                   <i class="collapse-open fa fa-chevron-down text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
@@ -85,9 +85,9 @@
                                         <div class="row">
                                           <div class="col-lg-6 mb-lg-0 mb-4">
                                             <div class="d-flex flex-column h-100">
-                                              <h5 class="font-weight-bolder">Landing Page 2</h5>
-                                              <p class="mb-5">Boostrap 5.</p>
-                                              <a class="text-dark font-weight-bold ps-1 mb-0 icon-move-left mt-auto" href="https://sib-peserta1.nurulfikri.com/tugas9/">
+                                              <h5 class="font-weight-bolder">Array, Struktur kendali, Switch case, Looping</h5>
+                                              <p class="mb-5"></p>
+                                              <a class="text-dark font-weight-bold ps-1 mb-0 icon-move-left mt-auto" href="https://sib-peserta1.nurulfikri.com/laravel/public/daftarpegawai">
                                                 <button class="btn bg-gradient-success btn-sm">
                                                   View
                                                   <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
@@ -112,7 +112,7 @@
                             <div class="accordion-item mb-3">
                               <h5 class="accordion-header" id="headingThree">
                                 <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                  Tugas 10
+                                  Tugas 3
                                   <span class="btn bg-gradient-success btn-sm btn-round collapse-close pt-1 position-absolute end-0 me-5"><i class="fa fa-check"></i></span>
                                   <i class="collapse-close fa fa-chevron-down text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
                                   <i class="collapse-open fa fa-chevron-down text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
@@ -125,9 +125,9 @@
                                         <div class="row">
                                           <div class="col-lg-6 mb-lg-0 mb-4">
                                             <div class="d-flex flex-column h-100">
-                                              <h5 class="font-weight-bolder">Admin Page </h5>
-                                              <p class="mb-5">Boostrap 5.</p>
-                                              <a class="text-dark font-weight-bold ps-1 mb-0 icon-move-left mt-auto" href="javascript:;">
+                                              <h5 class="font-weight-bolder">Landing Page SIMPERU</h5>
+                                              <p class="mb-5">Menggunkan template royal</p>
+                                              <a class="text-dark font-weight-bold ps-1 mb-0 icon-move-left mt-auto" href="https://sib-peserta1.nurulfikri.com/laravel/public/home">
                                                 <button class="btn bg-gradient-success btn-sm">
                                                   View
                                                   <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
@@ -139,7 +139,7 @@
                                             <div class="bg-gradient-primary border-radius-lg min-height-100">
                                               <img src="./assets/img/shapes/waves-white.svg" class="position-absolute h-100 top-0 d-md-block d-none" alt="waves">
                                               <div class="position-relative">
-                                                <img class="max-width-500 w-100 position-relative z-index-2 rounded" src="./assets/img/admin.png">
+                                                <img class="max-width-500 w-100 position-relative z-index-2 rounded" src="./assets/img/landing_simperu.png">
                                               </div>
                                             </div>
                                           </div>
@@ -148,46 +148,6 @@
                                     </div>
                                   </div>
                                 </div>
-                            </div>
-                            <div class="accordion-item mb-3">
-                              <h5 class="accordion-header" id="headingFour">
-                                <button class="accordion-button border-bottom font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                  Tugas 11
-                                  <span class="btn bg-gradient-success btn-sm btn-round collapse-close pt-1 position-absolute end-0 me-5"><i class="fa fa-check"></i></span>
-                                  <i class="collapse-close fa fa-chevron-down text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                                  <i class="collapse-open fa fa-chevron-down text-xs pt-1 position-absolute end-0 me-3" aria-hidden="true"></i>
-                                </button>
-                              </h5>
-                              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionRental">
-                                <div class="accordion-body text-sm opacity-8">
-                                <div class="card">
-                                      <div class="card-body p-3">
-                                        <div class="row">
-                                          <div class="col-lg-6 mb-lg-0 mb-4">
-                                            <div class="d-flex flex-column h-100">
-                                              <h5 class="font-weight-bolder">Landing Page Index</h5>
-                                              <p class="mb-5">Boostrap 5.</p>
-                                              <a class="text-dark font-weight-bold ps-1 mb-0 icon-move-left mt-auto" href="javascript:;">
-                                                <button class="btn bg-gradient-success btn-sm">
-                                                  View
-                                                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                                                </button>
-                                              </a>
-                                            </div>
-                                          </div>
-                                          <div class="col-lg-6 me-auto ms-0 text-end">
-                                            <div class="bg-gradient-primary border-radius-lg min-height-100">
-                                              <img src="./assets/img/shapes/waves-white.svg" class="position-absolute h-100 top-0 d-md-block d-none" alt="waves">
-                                              <div class="position-relative">
-                                                <img class="max-width-500 w-100 position-relative z-index-2 rounded" src="./assets/img/landing.png">
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </div>
